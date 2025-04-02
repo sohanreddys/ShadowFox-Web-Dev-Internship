@@ -7,7 +7,9 @@ Hey there! I’m Sohan, and I’m on a mission to build intuitive, dynamic, and 
 
 🚀 My Skills and Technologies:
 Front-End: HTML5, CSS, JavaScript, React.js, SCSS, Bootstrap
+
 Back-End: Node.js, Express.js, MongoDB, RESTful APIs, Firebase
+
 Version Control: Git, GitHub
 
 Tools: VS Code, NPM
@@ -18,9 +20,7 @@ Methodologies: Agile development, teamwork, and continuous learning
 Here are some of the exciting projects I’ve been working on during my internship, showcasing my growth and learning as I continue to develop as a full-stack developer:
 
 🌍 Why I Code
-The thrill of turning an idea into an interactive experience that can help people is what drives me. Whether it's creating a polished user interface or solving complex problems in the back end, coding allows me to express creativity while building things that matter.
-
-I believe in continuous learning, so every project I work on is an opportunity to challenge myself, learn new technologies, and contribute to the growing world of web development.
+The thrill of turning an idea into an interactive experience that can help people is what drives me. Whether it's creating a polished user interface or solving complex problems in the back end, coding allows me to express creativity while building things that matter. I believe in continuous learning, so every project I work on is an opportunity to challenge myself, learn new technologies, and contribute to the growing world of web development.
 
 📬 Get In Touch
 I’m always open to feedback, collaboration, or just a good discussion about tech. Feel free to reach out!
