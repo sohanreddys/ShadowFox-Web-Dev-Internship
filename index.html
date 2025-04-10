@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">My Portfolio</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a>--</a>
+            <a>---</a>
+        </nav>
+        <div id="menu-icon" class="fas fa-bars"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hello, I'm <span>Sohan</span></h1>
+            <h4>A <span class="typing-text"><span></span></span></h4>
+            <p>I do web development, cinematography, <br>and photography.</p>
+            <a href="#" class="btn">Hire Me</a>
+        </div>
+        <div class="home-img">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQFHBpsGwITeQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720518936323?e=1749081600&v=beta&t=yRJFG1i__aU_VKb71dUuyYgeDCoArMfxZjsL21NSisg" alt="Profile Image">
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title"><strong> My <span>Services</span></strong></h2>
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Web Development</h4>
+                    <p>Building modern and responsive websites with optimized UI/UX.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Photography</h4>
+                    <p>Professional event and portrait photography with creative vision.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Cinematography</h4>
+                    <p>Capturing high-quality cinematic shots with professional gear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="container">
+            <div class="bar">
+                <div class="info">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" alt="HTML">
+                    <span>HTML</span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <img src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo-2011.png" alt="CSS">
+                    <span>CSS</span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <img src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Logo.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <img src="https://cloudmatetechnologies.com/wp-content/uploads/2024/06/react.js.png" alt="React">
+                    <span>ReactJS</span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png" alt="NodeJS">
+                    <span>NodeJS</span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <img src="https://images.icon-icons.com/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png" alt="MongoDB">
+                    <span>MongoDB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <h2>Contact <span>Me</span></h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="6" placeholder="Your Message" required></textarea><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/sohan-reddy-seelam/" target="_blank" aria-label="LinkedIn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/sohanreddys" target="_blank" aria-label="GitHub">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuANvhcmXlP_41PL4VxP38Vcsted42ZY5TBQ&s" alt="GitHub">
+                </a>
+            </div>
+            <p>&copy; 2025 Sohan Reddy Seelam</p>
+        </div>
+    </footer>    
+    <script>
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+        
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        };
+        
+        const typingText = document.querySelector('.typing-text span');
+        const roles = ['Web Developer', 'Photographer', 'Cinematographer'];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+            const displayedText = currentRole.substring(0, charIndex);
+            typingText.textContent = displayedText;
+        
+            if (!isDeleting && charIndex < currentRole.length) {
+                charIndex++;
+                setTimeout(typeEffect, 150);
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
+                setTimeout(typeEffect, 100);
+            } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) {
+                    roleIndex = (roleIndex + 1) % roles.length;
+                }
+                setTimeout(typeEffect, 1000);
+            }
+        }
+        
+        typeEffect();
+        
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thanks for reaching out! I'll get back to you soon.");
+            this.reset();
+        });
+        </script>        
+
+</body>
+</html>
